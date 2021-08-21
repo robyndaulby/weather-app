@@ -15,114 +15,130 @@
       src="https://kit.fontawesome.com/d129b84c3c.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
-    <div class="card shadow-lg  mb-5 bg-body rounded" id="main-card">
-      <div class="card-body" id="main-card-body">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="card shadow  bg-body rounded h-100" id="left-card">
-              <div class="card-body" id="left-card-body">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control search-box"
-                    placeholder="Enter City Here"
-                    id="search-box"
-                  />
-                  <button
-                    class="btn btn-outline-secondary submit-button"
-                    type="button"
-                    id="submit-button"
-                  >
-                    Submit
-                  </button>
-                  <button
-                    class="btn btn-outline-secondary current-location-button"
-                    type="button"
-                    id="current-location-button"
-                  >
-                    Current Location
-                  </button>
+    <div class="wrapper">
+      <div class="card shadow-lg" id="main-card">
+        <div class="card-body" id="main-card-body" style="
+    padding-bottom: 0px;
+">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="card" id="left-card">
+                <div
+                  class="card-body"
+                  id="left-card-body"
+                  style="padding-bottom: 0px"
+                >
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control search-box"
+                      placeholder="Enter City Here"
+                      id="search-box"
+                    />
+                    <button
+                      class="btn submit-button"
+                      type="button"
+                      id="submit-button"
+                    >
+                      Submit
+                    </button>
+                    <button
+                      class="btn current-location-button"
+                      type="button"
+                      id="current-location-button"
+                    >
+                      Current Location
+                    </button>
+                  </div>
+                  <section class="city-section">
+                    <h1 id="city">Manchester</h1>
+                    <div class="date">20/08</div>
+                    <div class="time">10:12</div>
+                  </section>
+                  <section class="weather">
+                    <h2 class="current-temp">
+                      <strong id="current-temp">30</strong
+                      ><span class="units">°C</span>
+                    </h2>
+                    <i class="fas fa-cloud-rain"></i>
+                    <ul class="details">
+                      <li class="humidity">Humidity 0</li>
+                      <li class="wind">Wind 0</li>
+                      <li class="persipitation">Persipitation 0</li>
+                    </ul>
+                  </section>
                 </div>
-                <section class="city-section">
-                  <h1 id="city">Manchester</h1>
-                  <div class="date">20/08</div>
-                  <div class="time">10.12</div>
-                </section>
-                <section class="weather">
-                  <h2 class="current-temp">30°C</h2>
-                  <i class="fas fa-cloud-rain"></i>
-                  <ul class="details">
-                    <li class="humidity">Humidity 0</li>
-                    <li class="wind">Wind 0</li>
-                    <li class="persipitation">Persipitation 0</li>
-                  </ul>
-                </section>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="card shadow  bg-body rounded h-100" id="right-card">
-              <div class="card-body" id="right-card-body">
-                <h3 class="five-day">5 Day Forecast</h3>
-                <section class="results">
-                <ul>
-                  <li class="result-edge">
-                    <div class="row">
-                      <div class="col-4">Mon</div>
-                      <div class="col-4 " id=>30°C</div>
-                      <div class="col-4"><i class="fas fa-sun"></i></div>
-                    </div>
-                  </li>
-                  <li class="result">
-                    <div class="row">
-                      <div class="col-4">Tue</div>
-                      <div class="col-4">30°C</div>
-                      <div class="col-4"><i class="fas fa-sun"></i></div>
-                    </div>
-                  </li>
-                  <li class="result">
-                    <div class="row">
-                      <div class="col-4">Wed</div>
-                      <div class="col-4">30°C</div>
-                      <div class="col-4"><i class="fas fa-sun"></i></div>
-                    </div>
-                  </li>
-                  <li class="result">
-                    <div class="row">
-                      <div class="col-4">Thu</div>
-                      <div class="col-4">30°C</div>
-                      <div class="col-4"><i class="fas fa-sun"></i></div>
-                    </div>
-                  </li>
-                  <li class="result-edge">
-                    <div class="row">
-                      <div class="col-4">Fri</div>
-                      <div class="col-4">30°C</div>
-                      <div class="col-4"><i class="fas fa-sun"></i></div>
-                    </div>
-                  </li>
-                </ul>
-                </section>
+            <div class="col-sm-6">
+              <div class="card" id="right-card">
+                <div
+                  class="card-body"
+                  id="right-card-body"
+                  style="padding-bottom: 0px"
+                >
+                  <h3 class="five-day">5 Day Forecast</h3>
+                  <section>
+                    <ul>
+                      <li class="results">
+                        <div class="row">
+                          <div class="col-4" id="future-day">Mon</div>
+                          <div class="col-4 " id="future-temp">30°C
+                        </div>
+                        <div class="col-4" id="future-icon"><i class="fas fa-sun"></i></div>
+                      </li>
+                      <li class="results">
+                        <div class="row">
+                          <div class="col-4" id="future-day">Tue</div>
+                          <div class="col-4" id="future-temp">30°C</div>
+                          <div class="col-4" id="future-icon"><i class="fas fa-sun"></i></div>
+                        </div>
+                      </li>
+                      <li class="results">
+                        <div class="row">
+                          <div class="col-4" id="future-day">Wed</div>
+                          <div class="col-4" id="future-temp">30°C</div>
+                          <div class="col-4" id="future-icon"><i class="fas fa-sun"></i></div>
+                        </div>
+                      </li>
+                      <li class="results">
+                        <div class="row">
+                          <div class="col-4" id="future-day">Thu</div>
+                          <div class="col-4" id="future-temp">30°C</div>
+                          <div class="col-4" id="future-icon"><i class="fas fa-sun"></i></div>
+                        </div>
+                      </li>
+                      <li class="results">
+                        <div class="row">
+                          <div class="col-4" id="future-day">Fri</div>
+                          <div class="col-4" id="future-temp">30°C</div>
+                          <div class="col-4" id="future-icon"><i class="fas fa-sun"></i></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <small>
-          <a
-            href="https://github.com/robyndaulby/weather-app"
-            target="_blank"
-            >Open-source code</a
-          >
-          by Robyn Daulby
-        </small>
+        <a href="https://github.com/robyndaulby/weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by Robyn Daulby
+      </small>
     </div>
     <script src="src/app.js"></script>
   </body>

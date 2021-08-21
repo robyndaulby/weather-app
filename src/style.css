@@ -2,21 +2,11 @@ body {
   font-family: "Fira Sans", sans-serif;
 }
 
-#main-card {
-  max-width: 900px;
-  margin: 40px auto;
-  text-align: center;
-}
-
 h1 {
   margin: 10px 0px 0px 0px;
   font-weight: 500;
-}
-
-.date,
-.time {
-  display: inline;
-  font-weight: 300;
+  color: #6c73be;
+  font-size: 60px;
 }
 
 ul {
@@ -25,4 +15,109 @@ ul {
 
 li {
   list-style: none;
+}
+h3 {
+  font-size: 50px;
+  color: #6d73b0;
+  font-weight: 600;
+}
+li.results {
+  border: 2px solid #08c4d9;
+  border-radius: 35px;
+  margin: 30px auto;
+  height: 70px;
+  font-size: 30px;
+  position: relative;
+  top: -10px;
+}
+
+li.results .row {
+  position: relative;
+  top: 12px;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+#main-card {
+  border: 2px solid #e85d75;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card {
+  border: none;
+}
+
+.search-box {
+  border: 2px solid #b63bba;
+  border-right: none;
+}
+
+.submit-button {
+  background: #32af7b;
+  border: 2px solid #32af7b;
+  color: #fff;
+  font-weight: 400;
+}
+
+.current-location-button {
+  background: #2c7ad3;
+  border: 2px solid #2c7ad3;
+  color: #fff;
+  font-weight: 400;
+}
+
+.city-section {
+  border: 2px solid #e85d75;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.date,
+.time {
+  display: inline;
+  font-weight: 300;
+  font-size: 20px;
+  color: #474c85;
+}
+.weather {
+  border: 2px solid #fa900f;
+  border-radius: 5px;
+}
+
+.weather #current-temp {
+  color: #d84688;
+  font-size: 120px;
+}
+.weather .units {
+  color: #d84688;
+  position: relative;
+  top: -65px;
+  font-size: 20px;
+}
+.weather i {
+  font-size: 100px;
+  color: #474c85;
+}
+
+.details {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #474c85;
+}
+
+#future-day {
+  color: #d84688;
+  font-weight: 600;
+}
+
+#future-temp {
+  color: #f47e52;
+  font-weight: 600;
+}
+
+#future-icon {
+  color: #b63bba;
 }
