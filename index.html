@@ -38,16 +38,16 @@
                   id="left-card-body"
                   style="padding-bottom: 0px"
                 >
-                  <div class="input-group">
+                  <form class="input-group">
                     <input
                       type="text"
                       class="form-control search-box"
                       placeholder="Enter City Here"
-                      id="search-box"
+                      id="city-input"
                     />
                     <button
                       class="btn submit-button"
-                      type="button"
+                      type="submit"
                       id="submit-button"
                     >
                       Submit
@@ -59,20 +59,21 @@
                     >
                       Current Location
                     </button>
-                  </div>
+                  </form>
                   <section class="city-section">
                     <h1 id="city"></h1>
-                    <div id="date">20/08</div>
+                    <div id="date"></div>
                     
                   </section>
                   <section class="weather">
                     <h2 class="current-temp">
                       <strong id="current-temp"></strong
-                      ><span class="units">°C</span>
-                    </h2>
-                    <img src="" id="icon"></img>
-                   
-                    <ul class="details">
+                        ><span class="units">°C</span>
+                      </h2>
+                      <img src="" id="icon"></img>
+                      
+                      <ul class="details">
+                      <li id="description"></li>
                       <li>Feels Like <span id="feels-like"></span>°c</li>
                       <li>Humidity <span id="humidity"></span>%</li>
                       <li>Wind <span id="wind"></span>mps</li>

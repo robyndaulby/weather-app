@@ -4,11 +4,15 @@ body {
 
 h1 {
   margin: 10px 0px 0px 0px;
+  padding: 0;
   font-weight: 500;
   color: #6c73be;
   font-size: 60px;
 }
 
+h2 {
+  margin: 0;
+}
 ul {
   padding: 0px;
 }
@@ -80,7 +84,10 @@ li.results .row {
   font-weight: 300;
   font-size: 12px;
   color: #474c85;
+  padding: 0;
+  margin: 0;
 }
+
 .weather {
   border: 2px solid #fa900f;
   border-radius: 5px;
