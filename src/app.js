@@ -35,9 +35,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = Math.round(response.data.wind.speed);
   let dateElement = document.querySelector("#date");
-  dateElement.innerHTML = new Date(
-    (response.data.sys.sunrise + response.data.timezone) * 1000
-  );
+  dateElement.innerHTML = `Last updated ${formatDate(response.data.dt * 1000)}`;
 }
 
 let city = "London";
