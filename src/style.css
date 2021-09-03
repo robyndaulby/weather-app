@@ -25,6 +25,9 @@ h3 {
   color: #6d73b0;
   font-weight: 600;
 }
+li#description {
+  text-transform: capitalize;
+}
 li.results {
   border: 2px solid #08c4d9;
   border-radius: 35px;
