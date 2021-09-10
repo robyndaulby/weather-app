@@ -82,7 +82,6 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-  // let city = "Toronto";
   let apiKey = "3d9fc9302f2e9be4c97538b2fa4f9483";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
@@ -111,6 +110,19 @@ function showCelciusTemp(event) {
   fahrenheitLink.classList.remove("active");
 }
 
+function currentPosition(position) {
+  let lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let apiKey = "3d9fc9302f2e9be4c97538b2fa4f9483";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function currentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(currentPosition);
+}
+
 let celsiusTemp = null;
 
 let form = document.querySelector(".input-group");
@@ -121,5 +133,8 @@ fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
 let celsiusLink = document.querySelector("#celcius-link");
 celsiusLink.addEventListener("click", showCelciusTemp);
+
+let getLocation = document.querySelector("#current-location-button");
+getLocation.addEventListener("click", currentLocation);
 
 search("Manchester");
