@@ -24,7 +24,29 @@ function formatDate(timestamp) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#weather-forecast");
-  forecastElement.innerHTML = "test";
+
+  let forecastHTML = ``;
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                        <div>
+                      <ul>
+                        <li class="results">
+                          <div class="row">
+                            <div class="col-4 future-day">${day}</div>
+                            <div class="col-4 future-temp" >30°C
+                          </div>
+                          <div class="col-4 future-icon" ><i class="fas fa-sun"></i></div>
+                        </li>
+                       
+                      </ul>
+                      </div>
+                      </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayTemperature(response) {
