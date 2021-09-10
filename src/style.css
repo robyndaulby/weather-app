@@ -123,16 +123,16 @@ li.results .row {
   color: #474c85;
 }
 
-#future-day {
+.future-day {
   color: #d84688;
   font-weight: 600;
 }
 
-#future-temp {
+.future-temp {
   color: #f47e52;
   font-weight: 600;
 }
 
-#future-icon {
+.future-icon {
   color: #b63bba;
 }
