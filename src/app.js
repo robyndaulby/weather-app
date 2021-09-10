@@ -22,7 +22,8 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = ``;
@@ -49,8 +50,14 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getforecast(coordinates) {
+  let apiKey = "3d9fc9302f2e9be4c97538b2fa4f9483";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#current-temp");
   celsiusTemp = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = celsiusTemp;
@@ -71,6 +78,7 @@ function displayTemperature(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getforecast(response.data.coord);
 }
 
 function search(city) {
@@ -84,7 +92,6 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
-  console.log(cityInputElement.value);
 }
 
 function showFahrenheitTemp(event) {
@@ -116,4 +123,3 @@ let celsiusLink = document.querySelector("#celcius-link");
 celsiusLink.addEventListener("click", showCelciusTemp);
 
 search("Manchester");
-displayForecast();
