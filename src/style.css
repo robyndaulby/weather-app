@@ -94,16 +94,20 @@ li.results .row {
 .weather {
   border: 2px solid #fa900f;
   border-radius: 5px;
+  height: 386px;
 }
 
 .weather #current-temp {
   color: #d84688;
   font-size: 120px;
+  position: relative;
+  right: -12px;
 }
 .weather .units {
   color: #d84688;
   position: relative;
   top: -65px;
+  right: -15px;
   font-size: 20px;
   text-decoration: none;
 }
@@ -127,8 +131,4 @@ li.results .row {
 .future-temp {
   color: #f47e52;
   font-weight: 600;
-}
-
-.future-icon {
-  color: #b63bba;
 }

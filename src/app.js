@@ -53,7 +53,7 @@ function displayForecast(response) {
                           </div>
                           <div class="col-4 future-icon" ><img src="https://openweathermap.org/img/wn/${
                             forecastDay.weather[0].icon
-                          }@2x.png" width="42" ></img></div>
+                          }@2x.png" width="50" ></img></div>
                         </li>
                        
                       </ul>
@@ -80,7 +80,6 @@ function displayTemperature(response) {
   currentCity.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   let windElement = document.querySelector("#wind");
