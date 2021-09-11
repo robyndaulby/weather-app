@@ -101,17 +101,13 @@ li.results .row {
   font-size: 120px;
 }
 .weather .units {
+  color: #d84688;
   position: relative;
   top: -65px;
   font-size: 20px;
   text-decoration: none;
 }
 
-.weather .active {
-  color: #474c85;
-
-  cursor: default;
-}
 .weather i {
   font-size: 100px;
   color: #474c85;
